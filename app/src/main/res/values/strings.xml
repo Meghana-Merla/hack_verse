@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">hackverse2</string>
+    <string name="textview_register_head">Create New Account</string>
+    <string name="textview_register_full_name">Name*</string>
+    <string name="textview_register_mail_id">E-Mail ID*</string>
+    <string name="textview_register_password">Password*</string>
+    <string name="textview_register_confirmation">Confirm Password*</string>
+    <string name="edittext_register_full_name">Full Name</string>
+
+    <string name="edittext_register_mail_id">Mail ID</string>
+    <string name="edittext_register_password">Password</string>
+    <string name="edittext_register_confirmation">Confirm Password</string>
+
+
 </resources>

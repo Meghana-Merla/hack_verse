@@ -15,12 +15,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         title = "HackVerse" // Set title for the activity
 
-        // Open login activity
-        val buttonLogin: Button = findViewById(R.id.login_button)
-        buttonLogin.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
+//        // Open login activity
+//        val buttonLogin: Button = findViewById(R.id.login_button)
+//        buttonLogin.setOnClickListener {
+//            val intent = Intent(this, LoginActivity::class.java)
+//            startActivity(intent)
+//        }
 
         // Open register activity
         val buttonRegister: Button = findViewById(R.id.register_button)
