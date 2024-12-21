@@ -42,7 +42,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_below="@id/textView_main_head"
-            android:background="@color/purple_200"
+            android:background="@color/black"
             android:layout_marginTop="70dp"/>
 
         <Button
@@ -53,7 +53,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_below="@id/login_button"
-            android:background="@color/purple_200"
+            android:background="@color/black"
             android:layout_marginTop="30dp"/>
 
     </RelativeLayout>

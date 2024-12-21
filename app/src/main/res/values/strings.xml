@@ -10,6 +10,12 @@
     <string name="edittext_register_mail_id">Mail ID</string>
     <string name="edittext_register_password">Password</string>
     <string name="edittext_register_confirmation">Confirm Password</string>
+    <string name="textView_login_head">Welcome back..!!</string>
+    <string name="textView_login_instruction">Please log in to continue</string>
+    <string name="textView_login_account">Do not have an account?</string>
+    <string name="textView_login_register">Register</string>
+    <string name="textView_login_forgot">Forgot your password?"</string>
+    <string name="textView_login_reset">Click here to reset</string>
 
 
 </resources>
