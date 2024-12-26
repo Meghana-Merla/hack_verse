@@ -2,40 +2,49 @@ package com.example.hackverse2
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import androidx.activity.enableEdgeToEdge
+import android.view.View
+import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.firebase.FirebaseApp
-
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var progressBar: ProgressBar
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        title = "HackVerse" // Set title for the activity
 
+        progressBar = findViewById(R.id.progress_bar)
+        auth = FirebaseAuth.getInstance()
 
-                FirebaseApp.initializeApp(this)
+        progressBar.visibility = View.VISIBLE
 
-                // Enable Firebase Auth Debugging
-//
-
-
-        // Open login activity
-        val buttonLogin: Button = findViewById(R.id.login_button)
-        buttonLogin.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+        // Check if user is already authenticated
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            // User is signed in, navigate to HomeActivity
+            navigateToHomeActivity()
+        } else {
+            // Show login screen or a loading state
+            navigateToLoginActivity()
         }
+    }
 
-        // Open register activity
-        val buttonRegister: Button = findViewById(R.id.register_button)
-        buttonRegister.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-        }
+    private fun navigateToHomeActivity() {
+        progressBar.visibility = View.GONE
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navigateToLoginActivity() {
+        // After loading is done, hide progress bar
+        progressBar.visibility = View.GONE
+        // Navigate to login screen
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 }

@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:orientation="vertical"
-                android:background="@color/purple_700">
+                android:background="@color/purple_500">
 
                 <TextView
                     android:id="@+id/textView_login_head"
@@ -78,12 +78,22 @@
                     android:text="@string/textview_register_mail_id"
                     android:layout_toEndOf="@id/imageViewEmail"/>
 
+                <View
+                    android:id="@+id/divider_mail_id"
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:layout_toEndOf="@id/imageViewEmail"
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@id/textView_login_email"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/darker_gray"/>
+
                 <EditText
                     android:id="@+id/editText_login_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textView_login_email"
-                    android:background="@drawable/border"
+                    android:background="@android:color/transparent"
                     android:layout_toEndOf="@id/imageViewEmail"
                     android:hint="@string/edittext_register_mail_id"
                     android:layout_marginTop="10dp"
@@ -118,13 +128,25 @@
                     android:padding="6dp"
                     android:text="@string/textview_register_password" />
 
+                <View
+                    android:id="@+id/divider_pwd"
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:layout_toEndOf="@id/imageViewPwd"
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@id/textView_login_pwd"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/darker_gray"/>
+                
+
+
                 <EditText
                     android:id="@+id/editText_login_pwd"
                     android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textView_login_pwd"
                     android:layout_toEndOf="@id/imageViewPwd"
-                    android:background="@drawable/border"
+                    android:background="@android:color/transparent"
                     android:hint="@string/edittext_register_password"
                     android:inputType="textPassword"
                     android:layout_marginTop="10dp"
@@ -139,7 +161,10 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_below="@id/textView_login_pwd" />
+                    android:layout_below="@id/textView_login_pwd"
+                    android:src="@drawable/ic_show_pwd"/>
+
+
 
             </RelativeLayout>
 
